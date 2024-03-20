@@ -108,9 +108,12 @@ PATCH /subscriptions/{id}
 
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
+Must include at least one of the following:  
 | Name       | Type | Description|
 |:-----------|:------|:----------|
 | expirationDateTime  | DateTimeOffset  | Specifies the date and time in UTC when the subscription expires. For the maximum supported subscription length of time varies depending on the resource. |
+| notificationUrl  | String  | The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property is included in the HTTP POST request when Microsoft Graph sends the change notifications.|
+
 
 ## Response
 
